@@ -72,6 +72,7 @@ public class TwitterTestBase extends TestCase {
 
         conf1 = new PropertyConfiguration(p, "/id1");
         id1 = new TestUserInfo("id1");
+/*        
         conf2 = new PropertyConfiguration(p, "/id2");
         id2 = new TestUserInfo("id2");
         conf3 = new PropertyConfiguration(p, "/id3");
@@ -86,9 +87,9 @@ public class TwitterTestBase extends TestCase {
         numberPass = p.getProperty("numberid.password");
 //        id1id = Integer.valueOf(p.getProperty("id1id"));
         numberIdId = Long.valueOf(p.getProperty("numberid.id"));
-
+*/
         twitter1 = new TwitterFactory(conf1).getInstance();
-
+/*
         twitter2 = new TwitterFactory(conf2).getInstance();
 
         twitter3 = new TwitterFactory(conf3).getInstance();
@@ -100,6 +101,7 @@ public class TwitterTestBase extends TestCase {
         followsOneWay = p.getProperty("followsOneWay");
 
         readonly = new TwitterFactory(new PropertyConfiguration(p, "/readonly")).getInstance();
+*/        
     }
 
     public void testDummy() {
