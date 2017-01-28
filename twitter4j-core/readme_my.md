@@ -1,0 +1,10 @@
+githubからcloneしてきたtwitter4jのディレクトリをそのままプロジェクトにすると、
+mavenプロジェクトにすることはできるがJavaプロジェクトにするとpackageとパスが異なるためエラーになってします。
+
+importするときにtwitter4j-coreを選択してimportするとtwitter4j-coreだけのプロジェクトができる。
+これをmavenプロジェクト、javaプロジェクトに変換する。
+そのままではsrc/internal-xxxのソースコードが認識されていないため、twitter4j.HttpClient（src/internal-http/java/twitter4j/HttpClient.java）が発見できずにエラーになる。
+
+プロジェクトを右クリックしてpropertiesを選択し、JavaBuildPath -> Source でinternal-xxxディレクトリを追加する。
+このとき、例えばinternal-httpディレクトリを選択してしてまうと、パッケージがjava.twitter4jとなってしまいコード中でのpackage宣言（twitter4j）と異なり、
+エラーになってします。internal-http/javaを選択するとpackage宣言と合致する
